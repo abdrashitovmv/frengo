@@ -4,11 +4,11 @@ import React, { useState, useEffect } from 'react';
 // Components
 const Navbar = () => (
   <nav className="flex items-center justify-between px-6 py-4 md:px-12 fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md">
-    <div className="flex items-center gap-2">
-      <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl brand-font shadow-lg rotate-3">
+    <div className="flex items-center gap-2 group cursor-pointer">
+      <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white font-bold text-2xl brand-font shadow-lg rotate-3 transition-transform group-hover:rotate-0">
         F
       </div>
-      <span className="text-2xl font-bold text-indigo-900 brand-font tracking-tight">FrEnGo</span>
+      <span className="text-2xl font-bold text-indigo-900 brand-font tracking-tight group-hover:text-indigo-600 transition-colors">FrEnGo</span>
     </div>
     <div className="hidden md:flex items-center gap-8 font-semibold text-slate-600">
       <span className="cursor-default text-slate-300">Уроки</span>
@@ -54,11 +54,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen pt-32 pb-20 px-6 flex flex-col items-center justify-center overflow-hidden">
-      {/* Decorative blobs */}
       <div className="blob -top-20 -left-20 bg-blue-100" />
       <div className="blob -bottom-20 -right-20 bg-purple-100" />
       
-      {/* Floating Elements */}
       <FloatingIcon icon="🚀" className="top-1/4 left-10 delay-0" />
       <FloatingIcon icon="📚" className="top-1/3 right-12 delay-75" />
       <FloatingIcon icon="🎨" className="bottom-1/4 left-12 delay-150" />
@@ -79,7 +77,6 @@ const Hero = () => {
           Закрепляй знания, полученные на уроке, в игровой форме!
         </p>
 
-        {/* Action Button for Today's Lesson */}
         <LessonButton date={today} />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mt-16">
