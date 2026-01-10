@@ -33,7 +33,7 @@ const LessonButton = ({ date }: { date: string }) => (
         </svg>
       </div>
       <div className="text-left">
-        <div className="text-indigo-400 text-sm font-bold uppercase tracking-widest">Урок сегодня</div>
+        <div className="text-indigo-400 text-sm font-bold uppercase tracking-widest">Повторим то, что было</div>
         <div className="text-indigo-900 text-2xl font-bold soft-font">{date}</div>
       </div>
       <div className="ml-4 bg-indigo-100 text-indigo-600 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
@@ -69,7 +69,7 @@ const Hero = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight soft-font tracking-tight heading-shadow">
-          Привет, юный <span className="text-indigo-600">лингвист!</span>
+          Привет! Ну что, как <span className="text-indigo-600">успехи?</span>
         </h1>
         
         <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
