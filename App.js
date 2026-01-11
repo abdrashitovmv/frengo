@@ -1,7 +1,6 @@
 
-import React, { useState, useEffect } from 'react';
+const { useState, useEffect } = React;
 
-// --- Components ---
 const Navbar = ({ onViewChange, currentView }) => (
   <nav className="flex items-center justify-between px-6 py-4 md:px-12 fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-indigo-50">
     <div 
@@ -104,7 +103,7 @@ const Hero = ({ onStart }) => {
   );
 };
 
-export default function App() {
+function App() {
   const [currentView, setCurrentView] = useState('home');
 
   return (
@@ -125,3 +124,6 @@ export default function App() {
     </div>
   );
 }
+
+// Регистрируем в window, чтобы index.js мог его увидеть
+window.App = App;

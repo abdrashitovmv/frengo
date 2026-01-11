@@ -1,16 +1,13 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App.js';
+// В режиме Babel Standalone React и ReactDOM доступны глобально.
+// App также доступен глобально, так как он объявлен в App.js и загружен ранее.
 
 const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <window.App />
+    </React.StrictMode>
+  );
 }
-
-const root = ReactDOM.createRoot(rootElement);
-root.render(
-  React.createElement(React.StrictMode, null, 
-    React.createElement(App, null)
-  )
-);
